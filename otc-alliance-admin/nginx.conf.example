@@ -1,0 +1,25 @@
+server {
+    listen 80;
+    server_name your-domain.com;
+    root /path/to/your/dist;
+    index index.html;
+
+    # 处理静态资源
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # SPA 路由处理 - 所有路由都返回 index.html
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # 可选：API 代理（如果需要）
+    # location /api {
+    #     proxy_pass http://your-api-server;
+    #     proxy_set_header Host $host;
+    #     proxy_set_header X-Real-IP $remote_addr;
+    # }
+}
+

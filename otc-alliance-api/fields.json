@@ -1,0 +1,185 @@
+{
+  "success": true,
+  "code": 200,
+  "msg": null,
+  "merchantUsed": "Default(PayClient)",
+  "debugMerchantConfig": "Null",
+  "data": [
+    {
+      "field_name": "out_user_id",
+      "display": true,
+      "required": true,
+      "type": "text",
+      "expand": null,
+      "value": null,
+      "description": "User identifier defined by merchant",
+      "sub_fields": null
+    },
+    {
+      "field_name": "customer_email",
+      "display": true,
+      "required": true,
+      "type": "text",
+      "expand": null,
+      "value": null,
+      "description": "Valid email address of the customer",
+      "sub_fields": null
+    },
+    {
+      "field_name": "country_code",
+      "display": true,
+      "required": true,
+      "type": "text",
+      "expand": null,
+      "value": null,
+      "description": "Two-letter ISO country code",
+      "sub_fields": null
+    },
+    {
+      "field_name": "customer_type",
+      "display": true,
+      "required": true,
+      "type": "select",
+      "expand": null,
+      "value": [
+        {
+          "value_data": [],
+          "childs": [],
+          "key": "INDIVIDUAL",
+          "value": "INDIVIDUAL"
+        }
+      ],
+      "description": "Customer account type",
+      "sub_fields": null
+    },
+    {
+      "field_name": "first_name",
+      "display": true,
+      "required": true,
+      "type": "text",
+      "expand": null,
+      "value": null,
+      "description": "First name",
+      "sub_fields": null
+    },
+    {
+      "field_name": "middle_name",
+      "display": true,
+      "required": false,
+      "type": "text",
+      "expand": null,
+      "value": null,
+      "description": "Middle name (optional)",
+      "sub_fields": null
+    },
+    {
+      "field_name": "last_name",
+      "display": true,
+      "required": true,
+      "type": "text",
+      "expand": null,
+      "value": null,
+      "description": "Last name",
+      "sub_fields": null
+    },
+    {
+      "field_name": "id_document_type",
+      "display": true,
+      "required": true,
+      "type": "select",
+      "expand": null,
+      "value": [
+        {
+          "value_data": [],
+          "childs": [],
+          "key": "IDCARD",
+          "value": "IDCARD"
+        },
+        {
+          "value_data": [],
+          "childs": [],
+          "key": "PASSPORT",
+          "value": "PASSPORT"
+        },
+        {
+          "value_data": [],
+          "childs": [],
+          "key": "DRIVINGLICENCE",
+          "value": "DRIVINGLICENCE"
+        }
+      ],
+      "description": "Type of identification document",
+      "sub_fields": null
+    },
+    {
+      "field_name": "id_document_number",
+      "display": true,
+      "required": true,
+      "type": "text",
+      "expand": null,
+      "value": null,
+      "description": "Identification document number",
+      "sub_fields": null
+    },
+    {
+      "field_name": "occupation",
+      "display": true,
+      "required": false,
+      "type": "text",
+      "expand": null,
+      "value": null,
+      "description": "Occupation",
+      "sub_fields": null
+    },
+    {
+      "field_name": "id_front_side_document_id",
+      "display": true,
+      "required": true,
+      "type": "file",
+      "expand": null,
+      "value": null,
+      "description": "Front side of identification document",
+      "sub_fields": null
+    },
+    {
+      "field_name": "id_back_side_document_id",
+      "display": true,
+      "required": true,
+      "type": "file",
+      "expand": null,
+      "value": null,
+      "description": "When id_document_type is PASSPORT, no upload is required; other types require uploading.",
+      "sub_fields": null
+    },
+    {
+      "field_name": "address_document_id",
+      "display": true,
+      "required": false,
+      "type": "file",
+      "expand": null,
+      "value": null,
+      "description": "Proof of address (optional depending on country)",
+      "sub_fields": null
+    },
+    {
+      "field_name": "fund_source_document_id",
+      "display": true,
+      "required": false,
+      "type": "file",
+      "expand": null,
+      "value": null,
+      "description": "Proof of source of funds",
+      "sub_fields": null
+    },
+    {
+      "field_name": "other_id",
+      "display": false,
+      "required": false,
+      "type": "file",
+      "expand": null,
+      "value": null,
+      "description": "Additional supporting document",
+      "sub_fields": null
+    }
+  ]
+}

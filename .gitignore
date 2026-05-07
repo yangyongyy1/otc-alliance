@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Frontend build output
+dist/
+dist.rar
+
+# .NET build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+TestResults/
+
+# Local environment and secrets
+.env
+.env.*
+*.local
+secrets.json
+
+# IDE and OS files
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*_log.txt
+build_output.txt
+*.timestamp-*.mjs
+*.tmp
+temp_publish/
+config-cache/

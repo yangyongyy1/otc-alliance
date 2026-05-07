@@ -1,0 +1,162 @@
+// 重置样式
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: #f5f7fa !important;
+  background-attachment: fixed;
+  transition: background 0.3s ease;
+}
+
+// 页面加载完成后的背景
+body.loaded {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#app {
+  height: 100%;
+  background: transparent;
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #5a6fd8, #6a4190);
+  transform: scale(1.1);
+}
+
+// 通用样式
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 卡片样式
+.card-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// 表单样式
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+
+  .el-form-item {
+    margin-bottom: 24px;
+  }
+}
+
+// 表格样式
+.table-container {
+  .el-table {
+    margin-top: 24px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .pagination-container {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+// 按钮样式
+.operation-btns {
+  .el-button {
+    margin-right: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+// 现代化按钮样式
+.modern-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// 响应式布局
+@media screen and (max-width: 768px) {
+  .el-dialog {
+    width: 90% !important;
+  }
+
+  .el-form-item__label {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 0 0 10px;
+  }
+}

@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # 如果请求的是文件或目录，直接返回
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  
+  # 否则重定向到 index.html
+  RewriteRule . /index.html [L]
+</IfModule>
+
